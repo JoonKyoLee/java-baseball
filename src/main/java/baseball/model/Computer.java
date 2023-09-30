@@ -3,7 +3,6 @@ package baseball.model;
 import camp.nextstep.edu.missionutils.Randoms;
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Random;
 
 public class Computer {
     private static final int GAME_NUMBER_LENGTH = 3;
