@@ -15,4 +15,9 @@ public class InputView {
         System.out.print(INPUT_USER_NUMBER_MESSAGE);
         return Console.readLine();
     }
+
+    public String inputRestartNumber(){
+        System.out.println(RESTART_GAME_MESSAGE);
+        return Console.readLine();
+    }
 }
