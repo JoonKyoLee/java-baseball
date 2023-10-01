@@ -9,7 +9,11 @@ public class BallComparator {
     private int ball;
     private List<Integer> result;
 
-    public List<Integer> calculateBallStrike(List<Integer> computer, List<Integer> user){
+    public List<Integer> getBallStrike(){
+        return result;
+    }
+
+    public void setBallStrike(List<Integer> computer, List<Integer> user){
         result = new ArrayList<>();
         ball = 0;
         strike = 0;
