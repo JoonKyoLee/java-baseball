@@ -16,11 +16,11 @@ public class Game {
     private static final String RESTART_MESSAGE = "1";
     private final Computer computer;
     private final User userInput;
-    private InputView inputView;
-    private OutputView outputView;
-    private ConvertStringToInt convertStringToInt;
-    private NumberValidator numberValidator;
-    private BallComparator ballComparator;
+    private final InputView inputView = new InputView();
+    private final OutputView outputView = new OutputView();
+    private final ConvertStringToInt convertStringToInt = new ConvertStringToInt();
+    private final NumberValidator numberValidator = new NumberValidator();
+    private final BallComparator ballComparator = new BallComparator();
 
     private List<Integer> userInputNumber;
     private List<Integer> computerNumber;
@@ -42,12 +42,11 @@ public class Game {
         do{
             userInputNumber = convertStringToInt.convert(inputView.inputUserNumber());
 
-            if(!numberValidator.userNumberValidator(userInputNumber)){
-                throw new IllegalArgumentException();
-            }
+            numberValidator.userNumberValidator(userInputNumber);
+
             ballComparator.setBallStrike(computerNumber, userInputNumber);
 
-            outputView.printBallStrikeMessage();
+            outputView.printBallStrikeMessage(ballComparator.getBallStrike());
 
         } while(!finishGame());
 
