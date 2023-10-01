@@ -22,8 +22,7 @@ public class OutputView {
         System.out.println(FINISH_BASEBALL_GAME_MESSAGE);
     }
 
-    public void printBallStrikeMessage(){
-        List<Integer> baseballResult = ballComparator.getBallStrike();
+    public void printBallStrikeMessage(List<Integer> baseballResult){
         int ball = baseballResult.get(0);
         int strike = baseballResult.get(1);
 
