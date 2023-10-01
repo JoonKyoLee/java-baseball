@@ -8,12 +8,7 @@ public class Computer {
     private static final int GAME_NUMBER_LENGTH = 3;
     private static final int GAME_RANDOM_MIN_NUM = 1;
     private static final int GAME_RANDOM_MAX_NUM = 9;
-    private List<Integer> computerNumber;
-
-    public Computer(){
-        computerNumber = new ArrayList<>();
-        setComputerNumber();
-    }
+    private List<Integer> computerNumber = new ArrayList<>();
 
     public List<Integer> getComputerNumber(){
         return computerNumber;
